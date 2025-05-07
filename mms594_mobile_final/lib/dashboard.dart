@@ -50,7 +50,7 @@ class _DataSourceState extends State<DataSource> {
         Padding(padding: EdgeInsets.all(30),
       child: Text("All data was sourced from the official XML available from the National Hurricane Center",style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),),),
               Text("App by Mehdi", style: TextStyle(
-              color: const Color.fromARGB(255, 23, 5, 0),
+              color: const Color.fromARGB(255, 147, 147, 147),
               fontSize: 20)),
               ElevatedButton(
           child: const Text('Home'),

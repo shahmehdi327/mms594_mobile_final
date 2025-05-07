@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mms594_mobile_final/dashboard.dart';
+import 'package:mms594_mobile_final/dashboard2.dart';
+import 'package:mms594_mobile_final/dashboard3.dart';
 import 'customcard.dart';
 import 'package:http/http.dart' as http;
 import 'package:xml/xml.dart';
@@ -104,7 +106,7 @@ class _WeatherState extends State<Weather> {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-          scaffoldBackgroundColor: const Color.fromARGB(255, 19, 0, 1),
+          scaffoldBackgroundColor: const Color.fromARGB(255, 21, 165, 236),
           textTheme: const TextTheme(
             bodyLarge: TextStyle(color: Colors.white),
             bodyMedium: TextStyle(color: Colors.white),
@@ -126,14 +128,14 @@ class _WeatherState extends State<Weather> {
           child: <Widget>[
             Dashboard(),
             ListView(children: myNews),
-            ListView(children: myNews2),
-            Text('wdedwdw'),
+            Dashboard2(),
+            Dashboard3(),
           ][currentIndex],
         ),
         bottomNavigationBar: NavigationBar(
           height: 55,
           selectedIndex: currentIndex,
-          backgroundColor: const Color.fromARGB(255, 27, 0, 7),
+          backgroundColor: const Color.fromARGB(255, 0, 0, 0),
           onDestinationSelected: (int index) {
             setState(() {
               currentIndex = index;
@@ -141,9 +143,9 @@ class _WeatherState extends State<Weather> {
           },
           destinations: const <Widget>[
             NavigationDestination(icon: Icon(Icons.dashboard, color: Colors.white), label: "Dashboard"),
-            NavigationDestination(icon: Icon(Icons.newspaper, color: Colors.white), label: "News"),
-            NavigationDestination(icon: Icon(Icons.event, color: Colors.white), label: "Events"),
-            NavigationDestination(icon: Icon(Icons.contact_page, color: Colors.white), label: "Contact"),
+            NavigationDestination(icon: Icon(Icons.newspaper, color: Colors.white), label: "Archive"),
+            NavigationDestination(icon: Icon(Icons.event, color: Colors.white), label: "Tips"),
+            NavigationDestination(icon: Icon(Icons.contact_page, color: Colors.white), label: "Checklst"),
           ],
         ),
       ),
